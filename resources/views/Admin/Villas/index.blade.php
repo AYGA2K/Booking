@@ -25,7 +25,7 @@
                   <td>{{ $villa->city }}</td>
                   <td>{{ $villa->address }}</td>
                   
-                  <td> <img src="{{ asset($villa->photo) }}" alt="{{ $villa->name }}"> </td>
+                  <td> <img  style="height: 400px" src="{{ asset($villa->photo) }}" alt="{{ $villa->name }}"> </td>
                   <td  > <a type="button"  href=" {{route('Villas.show', $villa->id)}}" class="btn btn-info btn-sm ">Show</a> 
                     
                 <a type="button" href=" {{route('Villas.edit', $villa->id)}}" class="btn btn-info btn-sm ">Edit</a>
