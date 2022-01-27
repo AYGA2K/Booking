@@ -5,7 +5,7 @@
 
     <h1 class="text-primary fs-1 p-2   " style="text-align: center; " > Hotels </h1>
    
-    <table class="table table-light table-hover  "  >
+    <table class="table table-light table-hover  " style="width: 40%; margin-left:30% "    >
 
         <thead>
             <tr>
@@ -31,7 +31,7 @@
 </table>
 
  
-<table class="table table-light table-hover  "  >
+<table class="table table-light table-hover  " style="width: 40%; margin-left:30% "  >
     <h1 class="text-primary fs-1 p-2   " style="text-align: center; " > Villas </h1>
 
     <thead>

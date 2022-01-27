@@ -71,7 +71,7 @@
       <tr>
         <th scope="col">Name</th>
         <th scope="col">Adress</th>
-       
+     
         <th scope="col">Checkin date</th>
         <th scope="col">Checkout date</th>
       
@@ -87,6 +87,7 @@
  
   <th scope="row">{{ $villabooking->villa_guest->vguest_name }}</th>
   <td>{{ $villabooking->villa_guest->vadress }}</td>
+  <td>{{ $villabooking->villa->address }}</td>
   <td>{{ $villabooking->checkin_date }}</td>
   <td>{{ $villabooking->checkout_date }}</td>
   <td> {!! Form::open(['route' => ['stock.destroy', $villabooking->id], 'method'=>'DELETE']) !!}
@@ -102,6 +103,7 @@
 
   <th scope="row">{{ $item->villa_guest->vguest_name}}</th>
   <td>{{ $item->villa_guest->vadress }}</td>
+  
   <td>{{ $item->checkin_date }}</td>
   <td>{{ $item->checkout_date }}</td>
   <td> {!! Form::open(['route' => ['stock.destroy', $item->id], 'method'=>'DELETE']) !!}

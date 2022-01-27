@@ -10,7 +10,7 @@ class Villa_booking extends Model
     use HasFactory;
     protected $table = "villa_bookings";
     public function villa(){
-        return $this->belongsTo(Villas::class);
+        return $this->belongsTo(Villas::class,'id');
     }
     
     public function villa_guest(){

@@ -12,6 +12,6 @@ class Villas extends Model
 
  
     public function villa_booking (){
-        return $this->hasOne(Villa_booking::class);
+        return $this->hasOne(Villa_booking::class,'villaid','id');
 }
 }

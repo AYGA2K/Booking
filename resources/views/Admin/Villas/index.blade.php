@@ -10,8 +10,11 @@
             <tr>
                 <th>Name</th>
                 <th>City</th>
-                <th>address</th>
-                <th>image</th> 
+                <th>Address</th>
+                <th>Image</th> 
+                <th>Actions</th> 
+                <th></th>
+                
             </tr>             
         </thead>
         <tbody table-hover >
@@ -23,10 +26,12 @@
                   <td>{{ $villa->address }}</td>
                   
                   <td> <img src="{{ asset($villa->photo) }}" alt="{{ $villa->name }}"> </td>
-                  <td  > <a type="button"  href=" {{route('Villas.show', $villa->id)}}" class="btn btn-info btn-sm ">Show</a> </td> 
-                  <td><a type="button" href=" {{route('Villas.edit', $villa->id)}}" class="btn btn-info btn-sm ">Edit</a></td>
-                  
-                <td> {!! Form::open(['route' => ['Villas.destroy', $villa->id], 'method'=>'DELETE']) !!}
+                  <td  > <a type="button"  href=" {{route('Villas.show', $villa->id)}}" class="btn btn-info btn-sm ">Show</a> 
+                    
+                <a type="button" href=" {{route('Villas.edit', $villa->id)}}" class="btn btn-info btn-sm ">Edit</a>
+                </td>
+                <td>
+                {!! Form::open(['route' => ['Villas.destroy', $villa->id], 'method'=>'DELETE']) !!}
                     <button type="submit" class="btn btn-danger" onclick="return confirm(&quot;confirm delete?&quot;)">Delete</button>
                     {!! Form::close() !!} </td>  
                 </tr>

@@ -11,6 +11,8 @@
                 <th>Name</th>
                 <th>City</th>
                 <th>Image</th>
+                <th>Actions</th>
+                <th></th>
                
             </tr>
         </thead>
@@ -22,8 +24,8 @@
                   <td>{{ $hotel->city }}</td>
                   <td> <img src="{{ asset($hotel->photo) }}" alt="{{ $hotel->name }}"> </td>
                  
-                  <td  > <a type="button"  href=" {{route('Hotels.show', $hotel->id)}}" class="btn btn-info btn-sm ">Show</a> </td> 
-                  <td><a type="button" href=" {{route('Hotels.edit', $hotel->id)}}" class="btn btn-info btn-sm ">Edit</a></td>
+                  <td  > <a type="button"  href=" {{route('Hotels.show', $hotel->id)}}" class="btn btn-info btn-sm ">Show</a> 
+                  <a type="button" href=" {{route('Hotels.edit', $hotel->id)}}" class="btn btn-info btn-sm ">Edit</a></td>
                   
                 <td> {!! Form::open(['route' => ['Hotels.destroy', $hotel->id], 'method'=>'DELETE']) !!}
                     <button type="submit" class="btn btn-danger">Delete</button>

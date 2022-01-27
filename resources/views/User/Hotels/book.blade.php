@@ -24,8 +24,8 @@
                
                    </div>
         
-            <div class="collapse" id="collapseExample">
-                <div class="card card-body">
+            <div class="collapse" id="collapseExample"  >
+                <div class="card card-body"  style="background-color: blanchedalmond">
 
                     {!! Form::open(['action' => 'App\Http\Controllers\RoombookingController@store', 'methode'=>'POST' ]) !!}
                     <div class="mb-3 m-3 mx-auto d-none " style="width: 40%;" >
@@ -43,8 +43,14 @@
                    
                     <div class="mb-3 m-3 mx-auto " style="width: 40%;" >
                         <label for="">Hotel</label>
-                        <input type="text"  name="hotel" id="hotel_input" value="" class="form-control" aria-label="Disabled input example" disabled readonly >
-                    </div>
+                        <select class="form-select" style="color: blue"  name="hotel_id" aria-label="Default select example">
+                          @foreach ($hotels as $hotel)
+                          @if ($hotel->city==$input['hotel_city'])
+                          <option   value=" {{$hotel->id}} ">  {{ $hotel->name }} </option>
+                          @endif
+                          @endforeach
+                          </select>
+                      </div>
                
                     <div class="mb-3 m-3 mx-auto  d-none " style="width: 40%;" >
                         <label for="">Checkin</label>
